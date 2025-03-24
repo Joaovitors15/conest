@@ -1,7 +1,7 @@
-![GitHub License](https://github.com/volpini13/conest.git)
+![GitHub License](https://img.shields.io/github/license//conest?style=for-the-badge)
 
 # CONEST
 Sistema para gestão de estoque no comércio de bens e serviços.
 
 ## Author
-joão vitor souto 
+joao vitor souto balbino

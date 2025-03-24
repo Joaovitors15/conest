@@ -1,0 +1,9 @@
+Produtos:
+
+Problema na tecla Enter ao buscar;
+Remover o R$ ou usar como mascara;
+Excluir não funciona;
+
+Clientes e Fornecedores:
+
+Validação de CPF e CNPJ.
