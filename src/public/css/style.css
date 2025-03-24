@@ -1,0 +1,339 @@
+/* Estilos globais */
+body {
+    overflow: hidden;
+    /* Desativa a rolagem */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fonte mais moderna */
+    background-color: #f8f9fa;
+    /* Fundo claro e profissional */
+    margin: 0;
+    padding: 0;
+}
+
+/* Oculta IDs que não devem ser exibidos */
+#idClient,
+#idSupplier,
+#inputIdProduct {
+    display: none;
+}
+
+/* Estilos para botões */
+.button img {
+    margin: 1rem;
+    /* Usando unidades relativas */
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    /* Cor mais suave */
+    border-radius: 0.5rem;
+    /* Bordas mais arredondadas */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Efeito hover suave */
+}
+
+.button img:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Sombra mais destacada */
+}
+
+/* Botão de reset */
+#btnReset {
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/clear.png');
+    background-size: cover;
+    /* Garante que a imagem cubra o botão */
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: opacity 0.2s ease;
+    /* Efeito hover suave */
+}
+
+#btnReset:hover {
+    opacity: 0.8;
+    /* Efeito de transparência no hover */
+}
+
+/* Estilos específicos para a tela "Sobre" */
+#sobre {
+    padding: 2.5rem;
+    /* Aumentei o espaçamento interno */
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    /* Garante que o conteúdo não ultrapasse a largura da janela */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+}
+
+#sobre h1 {
+    font-size: 2.75rem;
+    /* Aumentei o tamanho da fonte */
+    font-weight: 600;
+    color: #007acc;
+    margin-bottom: 1.5rem;
+    /* Espaçamento maior abaixo do título */
+}
+
+#sobre p {
+    font-size: 1.25rem;
+    /* Aumentei o tamanho da fonte */
+    color: #333;
+    margin-bottom: 1.5rem;
+    /* Espaçamento maior entre os parágrafos */
+}
+
+#sobre .btn-warning {
+    margin-top: 2rem;
+    /* Aumentei o espaçamento acima do botão */
+    padding: 0.75rem 2.5rem;
+    /* Aumentei o padding do botão */
+    font-size: 1.25rem;
+    /* Aumentei o tamanho da fonte do botão */
+    font-weight: 500;
+    border-radius: 0.5rem;
+    /* Bordas mais arredondadas */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    /* Efeito hover suave */
+}
+
+#sobre .btn-warning:hover {
+    transform: translateY(-2px);
+    /* Efeito de levantar ao passar o mouse */
+    background-color: #e0a800;
+    /* Cor de hover */
+}
+
+/* Rodapé */
+footer {
+    background-color: #007acc;
+    width: 100%;
+    height: 50px;
+    /* Aumentei a altura */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    padding: 0 1.5rem;
+    /* Aumentei o espaçamento interno */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra mais destacada */
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+    font-size: 1rem;
+    /* Aumentei o tamanho da fonte */
+    font-weight: 500;
+    /* Fonte um pouco mais grossa */
+}
+
+footer img {
+    margin-right: 10px;
+    width: 28px;
+    /* Aumentei o tamanho do ícone */
+    height: 28px;
+}
+
+/* Imagem do produto */
+#imageProductPreview {
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    /* Bordas mais arredondadas */
+    width: 280px;
+    /* Aumentei o tamanho */
+    height: 280px;
+    padding: 0.75rem;
+    /* Aumentei o espaçamento interno */
+    position: fixed;
+    right: 1.5rem;
+    /* Ajustei o posicionamento */
+    bottom: 1.5rem;
+    display: block;
+    object-fit: contain;
+    background-color: #fff;
+    /* Fundo branco para a imagem */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Sombra mais destacada */
+}
+
+/* Remover setas de incremento/decremento do input number */
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spinner {
+    -moz-appearance: textfield;
+    /* Firefox */
+    -webkit-appearance: textfield;
+    /* Chrome, Safari */
+    appearance: textfield;
+    /* Padrão */
+}
+
+/* Estilos adicionais para melhorar o layout */
+.container {
+    padding: 2rem;
+    /* Aumentei o espaçamento interno */
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* Títulos maiores */
+    font-weight: 600;
+    /* Fonte mais grossa */
+    margin-bottom: 1.5rem;
+    /* Espaçamento maior abaixo do título */
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    /* Bordas mais arredondadas para inputs */
+    padding: 0.75rem;
+    /* Aumentei o padding dos inputs */
+    border: 1px solid #ced4da;
+    /* Borda mais suave */
+}
+
+.form-control:focus {
+    border-color: #007acc;
+    /* Cor de destaque ao focar */
+    box-shadow: 0 0 0 0.2rem rgba(0, 122, 204, 0.25);
+    /* Sombra ao focar */
+}
+
+.btn {
+    border-radius: 0.5rem;
+    /* Bordas mais arredondadas para botões */
+    padding: 0.75rem 1.5rem;
+    /* Aumentei o padding dos botões */
+    font-size: 1rem;
+    /* Fonte maior */
+    font-weight: 500;
+    /* Fonte um pouco mais grossa */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    /* Transições suaves */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    /* Efeito de levantar ao passar o mouse */
+}
+
+.btn-primary {
+    background-color: #007acc;
+    border-color: #007acc;
+}
+
+.btn-primary:hover {
+    background-color: #005f9e;
+    border-color: #005f9e;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* ===== NOVOS ESTILOS ADICIONADOS ===== */
+
+/* Estilos para o container da imagem e upload */
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Alinha o container à direita */
+    margin-top: 1rem;
+    /* Espaçamento superior */
+}
+
+/* Estilo para o ícone da câmera */
+#imageProductPreview {
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    width: 200px;
+    /* Tamanho fixo */
+    height: 200px;
+    /* Tamanho fixo */
+    object-fit: contain;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    /* Espaçamento entre o ícone e o botão */
+}
+
+/* Estilo para o botão de upload */
+.upload-button {
+    width: 200px;
+    /* Largura fixa para combinar com o ícone */
+    padding: 0.75rem 1rem;
+    /* Padding maior para melhor toque */
+    font-size: 1.1rem;
+    /* Fonte um pouco maior */
+    border-radius: 0.5rem;
+    background-color: #6c757d;
+    /* Cor do botão secundário */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    /* Centraliza o texto no botão */
+    margin-left: auto;
+    /* Centraliza o botão em relação ao ícone */
+    margin-right: auto;
+    /* Centraliza o botão em relação ao ícone */
+}
+
+.upload-button:hover {
+    background-color: #5a6268;
+    /* Cor ao passar o mouse */
+}
+
+/* Adicionando a classe para o estilo de erro */
+.input-error {
+    border: 2px solid red !important
+}

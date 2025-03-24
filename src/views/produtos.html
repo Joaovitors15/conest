@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <title>CONEST - Produtos</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Produtos</h1>
+        <form id="frmProduct" class="row g-3">
+            <!-- Busca do produto por Nome -->
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="searchProductName" placeholder="Buscar produto por nome..."
+                    maxlength="50" spellcheck="false">
+                <br>
+            </div>
+            <!-- Busca do produto por Código de Barras -->
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="searchProduct" placeholder="Buscar produto por código..."
+                    maxlength="30" spellcheck="false">
+                <br>
+            </div>
+            <div class="col-md-4">
+                <img src="../public/img/barcode.png" alt="barcode" class="img-fluid">
+            </div>
+
+            <hr class="border border-primary border-1 opacity-75">
+
+            <!-- ID do produto (oculto) -->
+            <div class="col-md-6">
+                <input class="form-control" type="text" id="inputIdProduct" placeholder="ID" readonly>
+            </div>
+
+            <!-- Barcode -->
+            <div class="col-md-6">
+                <label for="inputBarcodeProduct" class="form-label">Código de Barras <span
+                        class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="inputBarcodeProduct">
+            </div>
+
+            <!-- Nome do Produto -->
+            <div class="col-md-7">
+                <label for="inputNameProduct" class="form-label">Produto <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="inputNameProduct" required spellcheck="false"
+                    maxlength="50">
+            </div>
+
+            <!-- Imagem do Produto -->
+            <div class="col-md-5 image-upload-container">
+                <div class="d-flex justify-content-end">
+                    <img src="../public/img/camera.png" alt="Imagem" id="imageProductPreview" class="img-fluid">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input type="button" class="upload-button" value="Upload de imagem" onclick="uploadImage()">
+                </div>
+            </div>
+
+            <!-- Preço -->
+            <div class="col-md-6">
+                <label for="inputPrecoProduct" class="form-label">Preço <span class="text-danger">*</span></label>
+                <input class="form-control no-spinner" type="number" id="inputPrecoProduct" spellcheck="false" required
+                    step="0.01">
+            </div>
+
+            <!-- Fornecedor -->
+            <div class="col-md-6">
+                <label for="inputFornecedorProduct" class="form-label">Fornecedor</label>
+                <input type="text" class="form-control" id="inputFornecedorProduct" spellcheck="false" maxlength="50">
+            </div>
+
+            <!-- Quantidade -->
+            <div class="col-md-4">
+                <label for="inputQuantidadeProduct" class="form-label">Quantidade</label>
+                <input type="number" class="form-control" id="inputQuantidadeProduct" min="0" step="1">
+            </div>
+
+            <!-- Unidade -->
+            <div class="col-md-4">
+                <label for="inputUnidadeProduct" class="form-label">Unidade</label>
+                <input type="text" class="form-control" id="inputUnidadeProduct" placeholder="ex.: un, kg, litro"
+                    maxlength="10">
+            </div>
+
+            <!-- Valor Unitário -->
+            <div class="col-md-4">
+                <label for="inputValorUnitarioProduct" class="form-label">Valor Unitário</label>
+                <input type="number" class="form-control" id="inputValorUnitarioProduct" step="0.01" min="0">
+            </div>
+
+            <!-- Botões -->
+            <div class="col-12 mt-4 text-center">
+                <button type="submit" class="btn btn-success me-2" id="btnCreate">Adicionar</button>
+                <button type="submit" class="btn btn-warning me-2" id="btnUpdate">Editar</button>
+                <button type="button" class="btn btn-danger me-2" id="btnDelete"
+                    onclick="excluirProduto()">Excluir</button>
+                <button type="reset" class="btn btn-secondary" id="btnReset" onclick="resetForm()"></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="produtos.js"></script>
+</body>
+
+</html>

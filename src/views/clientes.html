@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://viacep.com.br">
+    <title>CONEST - Clientes</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Clientes</h1>
+        <form id="frmClient" class="mt-2 row g-3">
+            <!-- Buscar clientes -->
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="searchClient" placeholder="Buscar cliente..." maxlength="30"
+                    spellcheck="false">
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary w-100" id="btnRead"
+                    onclick="buscarCliente()">Buscar</button>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- ID do cliente (oculto) -->
+            <div class="col-md-4 d-none" id="idClient">
+                <input class="form-control" type="text" id="inputIdClient" placeholder="ID" readonly>
+            </div>
+
+            <!-- Nome -->
+            <div class="col-md-8">
+                <label for="inputNameClient" class="form-label">Nome Completo <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="inputNameClient" spellcheck="false" required maxlength="50">
+            </div>
+
+            <!-- CPF -->
+            <div class="col-md-4">
+                <label for="inputCpfClient" class="form-label">CPF <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="inputCpfClient" spellcheck="false" required maxlength="14"
+                    oninput="formatarCPF(this)" onblur="validarCPF(this)">
+                <small id="cpfError" class="text-danger d-none">CPF INVÁLIDO!</small>
+            </div>
+
+            <!-- Celular -->
+            <div class="col-md-4">
+                <label for="inputPhoneClient" class="form-label">DDD e Celular <span
+                        class="text-danger">*</span></label>
+                <input class="form-control" type="tel" id="inputPhoneClient" spellcheck="false" required maxlength="15">
+            </div>
+
+            <!-- E-mail -->
+            <div class="col-md-8">
+                <label for="inputEmailClient" class="form-label">E-mail <span class="text-danger">*</span></label>
+                <input class="form-control" type="email" id="inputEmailClient" spellcheck="false" required
+                    maxlength="50">
+            </div>
+
+            <!-- CEP -->
+            <div class="col-md-4">
+                <label for="inputCepClient" class="form-label">CEP</label>
+                <input class="form-control" type="tel" id="inputCepClient" spellcheck="false" maxlength="9"
+                    oninput="formatarCEP(this)" onblur="buscarCep(this.value.replace(/\D/g, ''))">
+            </div>
+
+            <!-- Cidade -->
+            <div class="col-md-8">
+                <label for="inputCityClient" class="form-label">Cidade</label>
+                <input class="form-control" type="text" id="inputCityClient" spellcheck="false" maxlength="50">
+            </div>
+
+            <!-- Estado -->
+            <div class="col-md-4">
+                <label for="inputStateClient" class="form-label">Estado</label>
+                <input class="form-control" type="text" id="inputStateClient" spellcheck="false" maxlength="2">
+            </div>
+
+            <!-- Endereço -->
+            <div class="col-md-8">
+                <label for="inputStreetClient" class="form-label">Logradouro</label>
+                <input class="form-control" type="text" id="inputStreetClient" spellcheck="false" maxlength="50">
+            </div>
+
+            <!-- Número do Endereço -->
+            <div class="col-md-4">
+                <label for="inputNumberClient" class="form-label">Número</label>
+                <input class="form-control" type="text" id="inputNumberClient" spellcheck="false" maxlength="5">
+            </div>
+
+            <!-- Complemento -->
+            <div class="col-md-4">
+                <label for="inputComplementClient" class="form-label">Complemento</label>
+                <input class="form-control" type="text" id="inputComplementClient" spellcheck="false" maxlength="5">
+            </div>
+
+            <!-- Bairro -->
+            <div class="col-md-4">
+                <label for="inputNeighborhoodClient" class="form-label">Bairro</label>
+                <input class="form-control" type="text" id="inputNeighborhoodClient" spellcheck="false" maxlength="50">
+            </div>
+
+            <!-- Botões -->
+            <div class="col-12 mt-4 text-center">
+                <button type="submit" class="btn btn-success me-2" id="btnCreate">Adicionar</button>
+                <button type="submit" class="btn btn-warning me-2" id="btnUpdate">Editar</button>
+                <button type="button" class="btn btn-danger me-2" id="btnDelete"
+                    onclick="excluirCliente()">Excluir</button>
+                <button type="reset" class="btn btn-secondary" id="btnReset" onclick="resetForm()"></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="clientes.js"></script>
+</body>
+
+</html>

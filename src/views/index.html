@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <title>CONEST</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+    <div class="container text-center mt-5">
+        <div class="row g-4">
+            <!-- Botão Clientes -->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm" onclick="clientes()">
+                    <img src="../public/img/client.png" class="card-img-top p-3" alt="Clientes">
+                    <div class="card-body">
+                        <h5 class="card-title">Clientes</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão Fornecedores -->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm" onclick="fornecedores()">
+                    <img src="../public/img/supplier.png" class="card-img-top p-3" alt="Fornecedores">
+                    <div class="card-body">
+                        <h5 class="card-title">Fornecedores</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão Produtos -->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm" onclick="produtos()">
+                    <img src="../public/img/product.png" class="card-img-top p-3" alt="Produtos">
+                    <div class="card-body">
+                        <h5 class="card-title">Produtos</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão Relatórios -->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm" onclick="relatorios()">
+                    <img src="../public/img/report.png" class="card-img-top p-3" alt="Relatórios">
+                    <div class="card-body">
+                        <h5 class="card-title">Relatórios</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p id="dataAtual"></p>
+        <img src="../public/img/dboff.png" alt="icone do banco de dados" id="iconDB">
+    </footer>
+
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
